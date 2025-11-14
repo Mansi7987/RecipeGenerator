@@ -11,12 +11,12 @@ function App() {
     <Router>
       <Routes>
         {/* Public routes */}
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
 
         {/* Protected homepage */}
         <Route
-          path="/"
+          path="/home"
           element={
             <ProtectedRoute>
               <>

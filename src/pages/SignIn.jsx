@@ -10,7 +10,7 @@ const SignIn = () => {
   const handleSignIn = () => {
     // you can add validation here later
     login(); // store dummy token
-    navigate("/"); // go to homepage
+    navigate("/home"); // go to homepage
   };
 
   return (
