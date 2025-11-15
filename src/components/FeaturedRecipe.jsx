@@ -29,50 +29,39 @@ const FeaturedRecipe = () => {
   };
   return (
     <>
-      {" "}
       <h1 className="ml-13 font-bold text-black text-xl font-sans">
         Featured Recipes
-      </h1>{" "}
+      </h1>
       <section className="mt-2 py-15 px-10 bg-linear-to-r from-yellow-50 to-yellow-100">
-        {" "}
         <Slider {...settings}>
-          {" "}
           {recipes.map((recipe) => (
             <div key={recipe.idMeal} className="p-3">
-              {" "}
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                {" "}
                 <img
                   src={recipe.strMealThumb}
                   alt={recipe.strMeal}
                   className="w-full h-52 object-cover"
                 />
-                \{" "}
                 <div className="p-4">
-                  {" "}
                   <h3 className="text-lg font-semibold text-gray-800 truncate">
-                    {" "}
-                    {recipe.strMeal}{" "}
-                  </h3>{" "}
+                    {recipe.strMeal}
+                  </h3>
                   <p className="text-sm text-gray-500 mt-1">
                     By Chef {recipe.strArea}
-                  </p>{" "}
-                  <div className="flex items-center justify-between mt-3">
-                    {" "}
-                    <div className="flex itmes-center gap-1 text-yellow-500">
-                      {" "}
+                  </p>
+                  <div className="flex items-center justify-between mt-3">                    <div className="flex itmes-center gap-1 text-yellow-500">
                       {[...Array(5)].map((_, i) => (
                         <FaStar key={i} size={14} />
-                      ))}{" "}
-                    </div>{" "}
+                      ))}
+                    </div>
                     <span className="text-sm text-gray-400">(4.5/5)</span>{" "}
-                  </div>{" "}
-                </div>{" "}
-              </div>{" "}
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}{" "}
-        </Slider>{" "}
-      </section>{" "}
+          ))}
+        </Slider>
+      </section>
     </>
   );
 };
